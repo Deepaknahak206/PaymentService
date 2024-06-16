@@ -13,7 +13,6 @@ public class RazorpayConfig {
     @Value("${razorpay.secret.id}")
     public  String razorpaysecret ;
     @Bean
-
     public RazorpayClient getRazorpayClient() throws RazorpayException {
         return new RazorpayClient(razorpayid, razorpaysecret) ;
     }

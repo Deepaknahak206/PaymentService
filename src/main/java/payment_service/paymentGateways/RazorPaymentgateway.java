@@ -5,7 +5,9 @@ import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RazorPaymentgateway implements PaymentGateway {
     private RazorpayClient razorPayClient;
 
@@ -21,16 +23,16 @@ public class RazorPaymentgateway implements PaymentGateway {
         paymentLinkRequest.put("currency", "INR");
 //        paymentLinkRequest.put("accept_partial",true);
 //        paymentLinkRequest.put("first_min_partial_amount",100);
-        paymentLinkRequest.put("expire_by", 1718040057);
+        paymentLinkRequest.put("expire_by", 1718539822);
         paymentLinkRequest.put("reference_id", Orderid.toString());
         paymentLinkRequest.put("description", "Payment for orderId " + Orderid.toString());
 
 
         // CUSTOMER DETAILS
         JSONObject customer = new JSONObject();
-        customer.put("name", "+919123456891");
-        customer.put("contact", "karan bhatia");
-        customer.put("email", "karan.bhatia_1@scaler.com");
+        customer.put("name", "+916370688059");
+        customer.put("contact", "Deepak");
+        customer.put("email", "deepaknahak206@scaler.com");
         paymentLinkRequest.put("customer", customer);
 
 
