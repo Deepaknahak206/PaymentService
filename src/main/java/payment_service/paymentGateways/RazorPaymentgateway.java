@@ -23,7 +23,7 @@ public class RazorPaymentgateway implements PaymentGateway {
         paymentLinkRequest.put("currency", "INR");
 //        paymentLinkRequest.put("accept_partial",true);
 //        paymentLinkRequest.put("first_min_partial_amount",100);
-        paymentLinkRequest.put("expire_by", 1718539822);
+        paymentLinkRequest.put("expire_by", 1718648656);
         paymentLinkRequest.put("reference_id", Orderid.toString());
         paymentLinkRequest.put("description", "Payment for orderId " + Orderid.toString());
 
@@ -31,7 +31,7 @@ public class RazorPaymentgateway implements PaymentGateway {
         // CUSTOMER DETAILS
         JSONObject customer = new JSONObject();
         customer.put("name", "+916370688059");
-        customer.put("contact", "Deepak");
+        customer.put("contact", "Deepak Nahak");
         customer.put("email", "deepaknahak206@scaler.com");
         paymentLinkRequest.put("customer", customer);
 

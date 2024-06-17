@@ -16,7 +16,7 @@ public class PaymentController  {
         this.paymentService=paymentService ;
     }
     @PostMapping("/request")
-    public  String Initiatepayment (@RequestBody PaymentRequestData request ){
+    public  String Initiatepayment (@RequestBody PaymentRequestData request){
         try{
             return this.paymentService.initiatepayment(request.getOrderId(), request.getAmount());
         } catch (Exception e){
